@@ -1,6 +1,6 @@
 # HARDHAT dAPP
 Pre-requisites -
-```npm```  ```Node JS (version >=18.0)```
+```npm``` and  ```Node JS (version >=18.0)```
 
 ## Installing Hardhat using npm inside a dir
 - initialize an npm project
