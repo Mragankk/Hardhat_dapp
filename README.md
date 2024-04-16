@@ -21,6 +21,15 @@ When Hardhat is run, it searches for the closest hardhat.config.js file starting
 
 ![image](https://github.com/Mragankk/Hardhat_dapp/assets/145200189/30244ad5-401c-411f-b11e-f1606b562eb5)
 
+- Install the Hardhat plugin for ethers.js, we will use recommended plugins 
+ ```
+     npm install --save-dev @nomicfoundation/hardhat-toolbox
+ ```
+- Add the following lines to hardhat.config.js
+```
+require("@nomicfoundation/hardhat-toolbox");
+```
+![image](https://github.com/Mragankk/Hardhat_dapp/assets/145200189/4a3a6ffb-78eb-4aed-8361-c8d7308812af)
 
 ## Writing and Compiling Contracts
 - Make a ```Token.sol``` (or file with any name) and wirte a basic contact in it
