@@ -51,3 +51,24 @@ require("@nomicfoundation/hardhat-toolbox");
   ```
 
    ![image](https://github.com/Mragankk/Hardhat_dapp/assets/145200189/8afc1639-be5b-4145-9bb2-5a3f2f877eb6)
+## Deploying to a live network (hardhat)
+- In Hardhat Ignition, deployments are defined through Ignition Modules. These modules are expected to be within the ./ignition/modules directory.
+- If aleady not made , make new directory ```ignition``` inside the project root's directory, then, create a directory named ```modules``` inside of the ignition directory.
+- Make ```Token.js``` inside same directory and paste below code in it:
+```
+const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
+
+const TokenModule = buildModule("TokenModule", (m) => {
+  const token = m.contract("Token");
+
+  return { token };
+});
+
+module.exports = TokenModule;
+```
+- To tell Hardhat to connect to a specific network, you can use the --network parameter when running any task, like this:
+```
+npx hardhat ignition deploy ./ignition/modules/Token.js --network <network-name>
+```
+
+  ![image](https://github.com/Mragankk/Hardhat_dapp/assets/145200189/ad99f33e-8d77-4540-945a-9c1d643129f5)
